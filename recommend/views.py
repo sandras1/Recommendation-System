@@ -19,7 +19,6 @@ class GetRecommendationsAPIView(APIView):
                 # Handle the case where a required key is missing in the JSON data
                 error_message = f"KeyError: '{e.args[0]}' is missing in the JSON Data"
                 return Response({"error": error_message}, status=status.HTTP_400_BAD_REQUEST)
-
             df1 = pd.read_csv("sheet_1.csv")
             df2 = pd.read_csv("sheet_3.csv")
 
