@@ -1,0 +1,7 @@
+from,to,category,assesment_type
+0,19,Novice,Basic
+20,39,Developing,Basic
+40,49,Proficient,Basic
+50,69,Novice,Advanced
+70,90,Developing,Advanced
+91,100,Proficient,Advanced
