@@ -1,0 +1,116 @@
+/* QuizForm.css */
+.container {
+  background-color: #333b65;
+  color: white;
+  /* background-image: url("./Assets/logo\ 1.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar {
+  background-color: #f1f6fb;
+  color: #333b65;
+  text-align: center;
+  font-size: 80px;
+  padding: 10px;
+  box-shadow: 0 15px 6px rgba(0, 0, 0, 0.1);
+  /* font-family: "Foldit", sans-serif; */
+  /* font-weight: 500; */
+  font-family: "UnifrakturCook", cursive;
+}
+
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+.question-container {
+  width: 80vw;
+  background-color: #f1f6fb;
+  color: #020a32;
+  padding: 10px;
+  border-radius: 10px;
+}
+.question-text {
+  font-size: 25px;
+  font-weight: 500;
+}
+.choice-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.choice-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.quiz-form label {
+  /* margin-bottom: 10px; */
+  font-size: 20px;
+}
+
+.quiz-form input {
+  margin: 5px 0;
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer; /* Add this line */
+}
+
+.quiz-form button {
+  background-color: #ffc90b;
+  color: #333b65;
+  padding: 5px 10px;
+  margin-top: 10px;
+  font-size: 30px;
+  min-width: 300px;
+  margin-bottom: 100px;
+  margin-top: 30px;
+  box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out; /* Add transition property */
+}
+.quiz-form button:hover {
+  transform: scale(1.2); /* Apply zoom effect on hover */
+  cursor: pointer;
+}
+
+/* table */
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+  min-width: 50vw;
+  font-size: 22px;
+  text-align: center;
+
+  box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.row {
+  display: flex;
+  background-color: #f1f6fb;
+  color: #020a32;
+}
+
+.cell {
+  flex: 1;
+  padding: 1em;
+  border: 1px solid #2c2b2b;
+}
+
+.header .cell {
+  font-weight: bold;
+  background-color: #ffc90b;
+}
