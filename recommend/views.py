@@ -16,7 +16,7 @@ class GetRecommendationsAPIView(APIView):
             req_id = request_json["requestId"]
             asse_id = request_json["courseId"]
         except KeyError as e:
-            error_message = f"KeyError: '{e.args[0]}' is missing in the JSON Data"
+            error_message = f"KeyError: '{e.args[0]}' is missing in the JSON data"
             return Response({"error": error_message}, status=status.HTTP_400_BAD_REQUEST)
 
         df1 = pd.read_csv("sheet_1.csv")
