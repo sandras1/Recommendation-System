@@ -82,35 +82,109 @@
 .table-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   margin-top: 50px;
 }
 .table {
   display: flex;
+  gap: 30px;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   min-width: 50vw;
+  max-width: 80vw;
   font-size: 22px;
   text-align: center;
 
-  box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3); */
 
   /* margin-left: auto;
   margin-right: auto; */
 }
 
-.row {
+/* row styling */
+.row-container {
   display: flex;
+  gap: 20px;
   background-color: #f1f6fb;
+  padding: 10px;
+  box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.row-container:hover {
+  transform: scale(1.2);
+  transition-delay: 0.2s;
+  /* box-shadow: none; */
+}
+.row-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row-image img {
+  width: 200px;
+}
+
+.row-content {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: start;
+  gap: 15px;
+}
+
+.row-title {
+  font-family: "Times New Roman", Times, serif;
   color: #020a32;
+  font-weight: 600;
 }
 
-.cell {
-  flex: 1;
-  padding: 1em;
-  border: 1px solid #2c2b2b;
-}
-
-.header .cell {
+.row-description {
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  text-align: start;
+  color: #333b65;
   font-weight: bold;
-  background-color: #ffc90b;
+  opacity: 0.8;
+  font-family: "Times New Roman", Times, serif;
+}
+.row-others {
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-between;
+  gap: 40px;
+}
+.star-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.star-image img {
+  width: 25px;
+}
+.star-image label {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #020a32;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.row-course-content {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.row-course-content img {
+  width: 25px;
+}
+
+.row-course-content div {
+  color: #020a32;
+  font-family: "Times New Roman", Times, serif;
 }
