@@ -25,7 +25,9 @@ const QuizForm = ({ setProgramData }) => {
   }, [score]);
   // api call
   const callApi = () => {
-    const url = "http://127.0.0.1:8000/api/get_recommendations/";
+    // const url = "http://127.0.0.1:8000/api/get_recommendations/";
+    const url =
+      "https://api-recommendation-system.demoserver.work/api/get_recommendations/";
 
     const data = {
       userId: 175,
