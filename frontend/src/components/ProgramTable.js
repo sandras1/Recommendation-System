@@ -37,6 +37,12 @@ const ProgramTable = ({ programData }) => {
                     <img src={pencilIcon} alt="edit image" />
                     <div>Course Content</div>
                   </div>
+                  <div className="start-course">
+                    <div>Start Course</div>
+                  </div>
+                  <div className="completed">
+                    <div>0% Completed </div>
+                  </div>
                 </div>
               </div>
             </div>

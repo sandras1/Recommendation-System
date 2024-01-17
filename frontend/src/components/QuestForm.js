@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
 import { questions } from "./Database";
-const QuizForm = ({ setProgramData }) => {
+const QuizForm = ({ setProgramData, setTempScore, setData }) => {
   const [answers, setAnswers] = useState({});
   const [score, setScore] = useState(0);
 
@@ -17,14 +17,15 @@ const QuizForm = ({ setProgramData }) => {
         tempScore += 10;
       }
     });
-    setScore(tempScore);
-    callApi();
+    // setScore(tempScore);
+    callApi(tempScore);
   };
   useEffect(() => {
     console.log(score);
   }, [score]);
   // api call
-  const callApi = () => {
+  const callApi = (tempScore) => {
+    console.log(tempScore, "callllllll");
     // const url = "http://127.0.0.1:8000/api/get_recommendations/";
     const url =
       "https://api-recommendation-system.demoserver.work/api/get_recommendations/";
@@ -35,7 +36,7 @@ const QuizForm = ({ setProgramData }) => {
       requestId: "li25",
       courseId: 445,
       courseName: "Mental Ability",
-      score: score,
+      score: tempScore,
     };
 
     fetch(url, {
@@ -49,6 +50,9 @@ const QuizForm = ({ setProgramData }) => {
       .then((data) => {
         console.log("Success:", data.recommended_programs);
         setProgramData(data.recommended_programs);
+        setData(data);
+        console.log(tempScore, "ssssssssssss");
+        setTempScore(tempScore);
       })
       .catch((error) => {
         console.error("Error:", error);
