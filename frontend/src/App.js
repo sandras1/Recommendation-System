@@ -1,18 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import QuestForm from "./components/QuestForm";
 import ProgramTable from "./components/ProgramTable";
 
 const App = () => {
   const [programData, setProgramData] = useState(null);
+  const myRef = useRef(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [programData]);
   return (
     <div className="container">
-      <div className="navbar">Medversity</div>
+      <div className="navbar">Academics</div>
       {programData === null ? (
-        <QuestForm setProgramData={setProgramData} />
+        <div>
+          <div className="mcq-head-cont">
+            <div>Assessment Test ( MCQs )</div>
+            <div>Total:10 x 10 = 100 Marks</div>
+          </div>
+          <QuestForm setProgramData={setProgramData} />
+        </div>
       ) : (
-        <ProgramTable programData={programData} />
+        <div ref={myRef}>
+          <div className="suggested-program-title">
+            Here are a few programs that are strongly recommended for you
+          </div>
+          <ProgramTable programData={programData} />
+        </div>
       )}
-      {/* <Test /> */}
     </div>
   );
 };
